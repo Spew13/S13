@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S13</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-screen" class="overlay">
+            <div class="modal">
+                <h1>S13</h1>
+                <input type="text" id="username-input" placeholder="Username...">
+                <input type="text" id="pfp-input" placeholder="PFP URL (Optional)">
+                <button onclick="login()">Enter S13</button>
+            </div>
+        </div>
+
+        <div id="main-interface" class="hidden">
+            <nav class="server-list" id="server-list">
+                <div class="server-icon plus" onclick="toggleServerModal()">+</div>
+            </nav>
+
+            <aside class="sidebar">
+                <div class="server-header"><h3 id="current-server-name">S13Chat</h3></div>
+                <div class="channel-list" id="channel-list"></div>
+                <div class="user-bar">
+                    <img id="my-pfp" src="" class="avatar">
+                    <span id="my-name">User</span>
+                    <button onclick="toggleSettings()">⚙️</button>
+                </div>
+            </aside>
+
+            <main class="chat-area">
+                <div id="messages" class="messages"></div>
+                <div class="input-area">
+                    <input type="text" id="chat-input" placeholder="Message #general...">
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
