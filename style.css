@@ -1,0 +1,31 @@
+:root {
+    --bg-dark: #121212;
+    --bg-sidebar: #1e1e1e;
+    --lime-primary: #32FF00;
+    --text-main: #e0e0e0;
+}
+
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: var(--text-main); overflow: hidden; }
+#app { display: flex; height: 100vh; }
+.hidden { display: none !important; }
+
+/* Discord Layout */
+.server-list { width: 72px; background: #0a0a0a; display: flex; flex-direction: column; align-items: center; padding-top: 12px; }
+.sidebar { width: 240px; background: var(--bg-sidebar); display: flex; flex-direction: column; }
+.chat-area { flex: 1; display: flex; flex-direction: column; background: #252525; }
+
+/* Lime Elements */
+.server-icon { width: 48px; height: 48px; border-radius: 50%; background: #333; margin-bottom: 8px; cursor: pointer; transition: 0.2s; border: 2px solid transparent; }
+.server-icon:hover { border-radius: 15px; border-color: var(--lime-primary); }
+.server-icon.active { border-radius: 15px; border-color: var(--lime-primary); }
+
+.messages { flex: 1; padding: 20px; overflow-y: auto; }
+.msg { margin-bottom: 15px; border-left: 3px solid var(--lime-primary); padding-left: 10px; }
+.msg b { color: var(--lime-primary); }
+
+.input-area { padding: 20px; background: #252525; }
+#chat-input { width: 100%; padding: 12px; border-radius: 8px; border: none; background: #404040; color: white; outline: none; }
+#chat-input:focus { box-shadow: 0 0 5px var(--lime-primary); }
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 100; }
+.modal { background: #1e1e1e; padding: 40px; border-radius: 12px; border: 1px solid var(--lime-primary); text-align: center; }
